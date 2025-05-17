@@ -5,25 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Movie Recommendations</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Movie Recommendations</h1>
+    <div class="logo-title">
+      <img src="AI_logo-removebg-preview.png" alt="AI Logo" class="ai-logo">
+      <h1>Movie Recommendations</h1>
+    </div>
   </header>
 
-  <input type="text" id="searchBar" placeholder="Search categories: horror, romantic, comedy, etc...">
+  <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search movie title or category (e.g., horror, romantic, Interstellar)">
+  </div>
 
   <div class="category-buttons">
     <button onclick="recommendMovies('horror')">Horror</button>
     <button onclick="recommendMovies('romantic')">Romantic</button>
     <button onclick="recommendMovies('adventure')">Adventure</button>
     <button onclick="recommendMovies('comedy')">Comedy</button>
+    <button onclick="recommendMovies('sci-fi')">Sci-Fi</button>
+    <button onclick="recommendMovies('thriller')">Thriller</button>
+    <button onclick="recommendMovies('animation')">Animation</button>
+    <button onclick="recommendMovies('action')">Action</button>
+    <button onclick="recommendMovies('mystery')">Mystery</button>
+    <button onclick="recommendMovies('drama')">Drama</button>
   </div>
 
-  <div class="slider" id="movieSlider">
-    <!-- Movie posters will be injected here -->
+  <div class="slider-container" id="sliderContainer">
+    <button class="nav-button left" onclick="scrollSlider(-1)">❮</button>
+    <div class="slider" id="movieSlider"></div>
+    <button class="nav-button right" onclick="scrollSlider(1)">❯</button>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
